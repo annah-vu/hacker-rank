@@ -258,4 +258,20 @@ Query the Western Longitude (LONG_W) for the largest Northern Latitude (LAT_N) i
 select round(long_w,4) from station
 where lat_n < 137.2345
 order by lat_n desc
-limit 1
+limit 1;
+
+'''
+Query the smallest Northern Latitude (LAT_N) from STATION that is greater than 38.7780 . Round your answer to 4 decimal places.
+'''
+select round(lat_n,4) from station
+where lat_n > 38.7780
+order by lat_n
+limit 1;
+
+'''
+Query the Western Longitude (LONG_W)where the smallest Northern Latitude (LAT_N) in STATION is greater than 38.7780. Round your answer to 4 decimal places.
+'''
+select round(long_w,4) from station
+where lat_n > 38.7780
+order by lat_n
+limit 1;
